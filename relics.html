@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>正典信物 · 世界编年史 II</title>
-<meta name="description" content="狼先生与他的学生们 · MYSKME 世界编年史 · 正典信物器物图鉴 · Make Yourself Special & Kind">
+<meta name="description" content="狼先生与他的学生们 · MYSKME 世界编年史 · 正典信物器物图鉴与六域纹章 · Make Yourself Special & Kind">
 <style>
 :root{
   --paper:#f4efe3; --ink:#241f18; --ink2:#5c5344; --ink3:#8a7f6b;
@@ -38,6 +38,13 @@ a{color:inherit}
 .relic h3{margin:0;font-size:16px;font-weight:600;letter-spacing:.08em}
 .relic .cap{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.7;padding-left:11px;border-left:2px solid var(--gold)}
 .relic .cap b{color:var(--gold);font-weight:600}
+/* 六域纹章 */
+.crestgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:clamp(16px,2.4vw,26px)}
+.crest{display:flex;gap:15px;align-items:center}
+.crest .cw{flex:0 0 auto;width:88px;height:88px;display:grid;place-items:center}
+.crest .cw img{width:84px;height:84px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(20,14,8,.45))}
+.crest h3{margin:0;font-size:16.5px;font-weight:600;letter-spacing:.12em}
+.crest .cap{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.7;padding-left:11px;border-left:2px solid var(--gold)}
 .foot{margin-top:clamp(48px,8vw,88px);padding-top:26px;border-top:1px solid var(--line);text-align:center}
 .foot .mys{font-size:11px;letter-spacing:.42em;color:var(--gold);text-transform:uppercase}
 .foot .nav{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
@@ -53,8 +60,8 @@ a{color:inherit}
     <div class="kick">Canonical Relics</div>
     <h1>正典信物</h1>
     <div class="st">狼 先 生 与 他 的 学 生 们 · 世 界 编 年 史 II</div>
-    <p class="lead">一个人留下的东西，比他说过的话诚实。这些器物散在各处——一枚铜印、一封没寄的信、一盏猫形的灯——把它们摆到一起，就是一整卷的人。</p>
-    <div class="meta">正典器物 · 陈列于展柜 · 名称与故事另讲</div>
+    <p class="lead">一个人留下的东西，比他说过的话诚实。这些器物散在各处——一枚铜印、一封没寄的信、一盏猫形的灯、一把始终没拔的剑——把它们摆到一起，就是一整卷的人。末尾另陈六域纹章。</p>
+    <div class="meta">二十九件正典器物 · 六域纹章 · 陈列于展柜</div>
   </header>
   <main id="main"></main>
   <footer class="foot">
@@ -96,7 +103,25 @@ var GROUPS=[
    {id:'card',n:'白鹤名帖',c:'天之国白鹤宰相的一张<b>引荐信</b>。最远的地方，也会为这一夜下场。'},
    {id:'anchor',n:'麒的船锚',c:'浪来了，先站在前面——海族少年的船锚。'},
    {id:'shards',n:'爆炸残片',c:'屿封在角落的越界炮弹，炸开后的残片。他从此不再越界。'},
+   {id:'beadcloud',n:'断云珠',c:'云被那一剑分开的瞬间，凝成的小珠——一半白，一半透明。守约的云，把信物留在了线上。'},
  ]},
+ {g:'四 · 随身之物',sub:'一个人留下的东西，比他说过的话诚实',items:[
+   {id:'sword',n:'未拔的剑',c:'琳横在膝上的那把，<b>始终未拔</b>。剑不出鞘，穗先替她说话——直到无名之原那一夜，她终于拔了。'},
+   {id:'bracelet',n:'向阳手链',c:'瑾自己编的。窗台上那盆向日葵没人认领，但从没枯死过。'},
+   {id:'lollipop',n:'三色棒棒糖',c:'晰口袋里永远备着三种口味——<b>草莓是快乐，蓝莓是冷静，牛奶是安慰</b>。'},
+   {id:'guitar',n:'璐的小吉他',c:'能唱、能弹、能画——三样本事，都没拜过师。'},
+   {id:'dice',n:'洋的骰子',c:'「骰子比星座更诚实。」觉醒那天他骰出了学期最高点，只耸了耸肩。'},
+   {id:'shuttle',n:'云梭',c:'先手一刀，正合破云。'},
+   {id:'urn',n:'薪火陶罐',c:'罐口那一点火种从没灭过——<b>薪火要传得更久</b>。'},
+ ]},
+];
+var CRESTS=[
+ {id:'academy',n:'学院',c:'狼先生与光明学徒。灰狼首，茶壶与铁尺交叉——以茶与尺执教。'},
+ {id:'blackdomain',n:'黑域',c:'蛇女王叶王的国度。盘绕的网纹蟒，绿金鳞与一点紫光。'},
+ {id:'graytower',n:'灰塔',c:'鹦鹉学院，三国之外的第三极。鹦鹉与螺旋收拢的塔——比谁都冷、都旧。'},
+ {id:'skyrealm',n:'天之国',c:'断云之上更高处。展翅白鹤与云纹，清冷高远。'},
+ {id:'seadomain',n:'海域',c:'海族之乡。深海之影、浪与一枚船锚。'},
+ {id:'neutral',n:'中立',c:'归正者。骏马首、卸下锋芒的旧甲，与一株抽芽。'},
 ];
 var M=document.getElementById('main');
 GROUPS.forEach(function(grp){
@@ -109,6 +134,17 @@ GROUPS.forEach(function(grp){
   h+='</div>';
   sec.innerHTML=h;M.appendChild(sec);
 });
+// 六域纹章
+(function(){
+  var sec=document.createElement('section');
+  var h='<div class="grp"><h2>五 · 六域纹章</h2><span class="gsub">每一域，都有自己的徽记</span></div><div class="crestgrid">';
+  CRESTS.forEach(function(it){
+    h+='<article class="crest"><div class="cw"><img loading="lazy" src="assets/crests/crest-'+it.id+'.webp" alt="'+it.n+'纹章" onerror="this.style.display=\'none\'"></div>'
+      +'<div><h3>'+it.n+'</h3><div class="cap">'+it.c+'</div></div></article>';
+  });
+  h+='</div>';
+  sec.innerHTML=h;M.appendChild(sec);
+})();
 </script>
 </body>
 </html>

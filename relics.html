@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>正典信物 · 世界编年史 II</title>
+<meta name="description" content="狼先生与他的学生们 · MYSKME 世界编年史 · 正典信物器物图鉴 · Make Yourself Special & Kind">
+<style>
+:root{
+  --paper:#f4efe3; --ink:#241f18; --ink2:#5c5344; --ink3:#8a7f6b;
+  --gold:#a8863c; --gold2:#c9a64a; --line:rgba(40,32,20,.14);
+  --night:#141019; --night2:#1c1622; --nink:#efe6d2; --ngold:#e8c768;
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.9;
+  background-image:radial-gradient(1000px 520px at 50% -8%,rgba(168,134,60,.10),transparent 62%)}
+.wrap{max-width:1080px;margin:0 auto;padding:clamp(26px,5vw,64px) clamp(16px,4vw,40px) 110px;overflow-x:hidden}
+a{color:inherit}
+.cover{text-align:center;padding:clamp(22px,6vw,64px) 0 clamp(20px,4vw,40px);border-bottom:1px solid var(--line)}
+.kick{font-size:11px;letter-spacing:.5em;color:var(--gold);text-transform:uppercase}
+.cover h1{font-size:clamp(40px,9vw,78px);font-weight:600;letter-spacing:.28em;margin:.16em 0 .06em;text-indent:.28em;
+  background:linear-gradient(180deg,var(--ink) 30%,var(--gold) 130%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .st{font-size:clamp(13px,2vw,16px);letter-spacing:.26em;color:var(--ink2)}
+.cover .lead{max-width:28em;margin:22px auto 0;font-size:13.5px;color:var(--ink2);line-height:2.05}
+.cover .meta{margin-top:18px;font-size:11px;letter-spacing:.2em;color:var(--ink3)}
+.grp{margin:clamp(38px,6vw,64px) 0 clamp(12px,2vw,20px);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  padding-bottom:10px;border-bottom:1px solid var(--line)}
+.grp h2{font-size:18px;font-weight:600;letter-spacing:.2em;margin:0}
+.grp .gsub{font-size:12px;color:var(--ink3);letter-spacing:.1em;font-style:italic}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:clamp(14px,2vw,22px)}
+.relic{display:flex;gap:14px;align-items:center;padding:2px}
+.vitrine{flex:0 0 auto;width:92px;height:92px;border-radius:8px;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 38%,var(--night2),var(--night));
+  border:1px solid rgba(201,166,74,.28);box-shadow:0 6px 20px rgba(20,14,8,.28),inset 0 0 30px rgba(0,0,0,.4)}
+.vitrine img{width:76px;height:76px;object-fit:contain;filter:drop-shadow(0 3px 6px rgba(0,0,0,.5))}
+.relic .info{min-width:0}
+.relic h3{margin:0;font-size:16px;font-weight:600;letter-spacing:.08em}
+.relic .cap{margin-top:5px;font-size:12.5px;color:var(--ink2);line-height:1.7;padding-left:11px;border-left:2px solid var(--gold)}
+.relic .cap b{color:var(--gold);font-weight:600}
+.foot{margin-top:clamp(48px,8vw,88px);padding-top:26px;border-top:1px solid var(--line);text-align:center}
+.foot .mys{font-size:11px;letter-spacing:.42em;color:var(--gold);text-transform:uppercase}
+.foot .nav{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.foot .nav a{font-size:12.5px;letter-spacing:.12em;color:var(--ink2);border:1px solid var(--line);
+  border-radius:22px;padding:7px 18px;text-decoration:none;transition:.2s;background:rgba(168,134,60,.05)}
+.foot .nav a:hover{color:var(--gold);border-color:rgba(168,134,60,.5)}
+.foot .note{margin-top:18px;font-size:10.5px;color:var(--ink3);letter-spacing:.08em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="cover">
+    <div class="kick">Canonical Relics</div>
+    <h1>正典信物</h1>
+    <div class="st">狼 先 生 与 他 的 学 生 们 · 世 界 编 年 史 II</div>
+    <p class="lead">一个人留下的东西，比他说过的话诚实。这些器物散在各处——一枚铜印、一封没寄的信、一盏猫形的灯——把它们摆到一起，就是一整卷的人。</p>
+    <div class="meta">正典器物 · 陈列于展柜 · 名称与故事另讲</div>
+  </header>
+  <main id="main"></main>
+  <footer class="foot">
+    <div class="mys">Make Yourself Special &amp; Kind</div>
+    <div class="nav">
+      <a href="index.html">← 世界编年史</a>
+      <a href="locations.html">正典地点</a>
+      <a href="wuyue.html">剧情图册 · 无月</a>
+      <a href="https://myskme.github.io/myskme-hub/">作品总目</a>
+    </div>
+    <div class="note">器物图为可复用美术资产（自鸣棋遗物系统等）· 陈列策展，非游戏数值</div>
+  </footer>
+</div>
+<script>
+var GROUPS=[
+ {g:'一 · 导师与学院',sub:'留在灯下的那些东西',items:[
+   {id:'seal',n:'狼先生的铜印',c:'刻着 <b>Make Yourself Special &amp; Kind</b>。呵一口气，按在纸上——「该到了」。开学的信物，也是这卷故事的起点。'},
+   {id:'teapot',n:'茶壶',c:'以茶与尺执教。第一杯茶，端给最先到的那一个；她一待就是两年。'},
+   {id:'letter',n:'诺的信',c:'没寄出去，但一直带着——抽屉里，十一封<b>未烧的信</b>。'},
+   {id:'tassel',n:'琳的剑穗',c:'那把横在膝上、始终未拔的剑，垂着的一枚穗。剑不出鞘，穗先替她说话。'},
+   {id:'ruler',n:'理性尺',c:'菀的武器，丈量，也评判。刻度还在，握着它的人却一页页透明了。'},
+   {id:'thorn',n:'欣的空耳机',c:'戴着它进教室——不是在听音乐，只是需要一道物理意义上的<b>边界</b>。'},
+   {id:'astro',n:'断云星盘',c:'读云识路的旧盘。云飘到线前就停下，像约好了似的。'},
+   {id:'quill',n:'战报羽笔',c:'编年史落笔的那支羽。谁赢谁输，都要有人记下来。'},
+   {id:'goldleaf',n:'金叶徽章',c:'一枚金色的银杏叶——把战败也酿成一壶茶。'},
+   {id:'dustbag',n:'星尘袋',c:'星尘泉边收的一小袋星屑。最亮的那颗，从来不是数出来的。'},
+   {id:'bell',n:'塔顶旧铃',c:'非响不可的日子，到了。'},
+   {id:'plaque',n:'门神匾',c:'挡在门前的一块旧匾。有人得站在最前面。'},
+   {id:'quiver',n:'断云箭袋',c:'箭走云缝——穿云而过的那一袋箭。'},
+ ]},
+ {g:'二 · 黑域与灰塔',sub:'让人自愿走进去的东西',items:[
+   {id:'mask',n:'紫光面具',c:'叶王留在石上的面具。航看了它七个昼夜，第八天，清醒地自己戴上。'},
+   {id:'scale',n:'蛇王旧鳞',c:'蛇女王蜕下的一片旧鳞——<b>鳞下藏着从前的自己</b>。'},
+   {id:'diary',n:'菀的旧日记',c:'每写一页，就更透明一寸。最后一页，空着。'},
+   {id:'echo',n:'复读机',c:'相信正确答案只有一个。那个声音安全、可预测、不带惊喜。'},
+ ]},
+ {g:'三 · 远方与特殊',sub:'从很远的地方寄来的东西',items:[
+   {id:'lamp',n:'灯猫的小灯',c:'夜里最深的那一盏——始终跟着猫女琳、那只无名小黑猫叼着的灯。'},
+   {id:'card',n:'白鹤名帖',c:'天之国白鹤宰相的一张<b>引荐信</b>。最远的地方，也会为这一夜下场。'},
+   {id:'anchor',n:'麒的船锚',c:'浪来了，先站在前面——海族少年的船锚。'},
+   {id:'shards',n:'爆炸残片',c:'屿封在角落的越界炮弹，炸开后的残片。他从此不再越界。'},
+ ]},
+];
+var M=document.getElementById('main');
+GROUPS.forEach(function(grp){
+  var sec=document.createElement('section');
+  var h='<div class="grp"><h2>'+grp.g+'</h2><span class="gsub">'+grp.sub+'</span></div><div class="grid">';
+  grp.items.forEach(function(it){
+    h+='<article class="relic"><div class="vitrine"><img loading="lazy" src="assets/relics/relic-'+it.id+'.webp" alt="'+it.n+'" onerror="this.style.display=\'none\'"></div>'
+      +'<div class="info"><h3>'+it.n+'</h3><div class="cap">'+it.c+'</div></div></article>';
+  });
+  h+='</div>';
+  sec.innerHTML=h;M.appendChild(sec);
+});
+</script>
+</body>
+</html>
